@@ -190,51 +190,102 @@ main {
 }
 /* footer styles */
 footer {
-  width: 100%;
-  height: 650px;
-  background: #fff8f3;
   display: flex;
-  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  background-color: #fff8f3;
+  gap: 50px;
+  padding-left: 150px;
+  padding-right: 200px;
 }
+.social-icon a {
+  text-decoration: none;
+  padding-right: 15px;
+}
+
 .contact {
-  padding-left: 230px;
-  padding-right: 230px;
-  padding-top: 130px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  gap: 20px;
+  padding-left: 80px;
+}
+.contact-title {
+  padding-bottom: 20px;
+  font-weight: 700;
+  font-size: 35px;
+  color: #181818;
+  margin-right: 90px;
 }
 .form-class {
-  padding-right: 230px;
-  padding-top: 130px;
+  padding-right: 80px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
 }
-form {
-  margin-top: 10px;
+.footer-form {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
 }
+
 form input {
   border: 0px;
   width: 350px;
-  height: 64px;
+  height: 54px;
   margin-bottom: 15px;
   border-radius: 5px;
   padding-left: 20px;
 }
-.contact-title {
-  margin-bottom: 10px;
-  font-weight: 700;
-  font-size: 35px;
-  color: #181818;
-}
-a img {
-  margin-top: 15px;
-  padding-right: 10px;
-}
-.contact a {
-  text-decoration: none;
-}
-/* make responsive */
 
+/* make responsive */
 @media screen and (max-width: 576px) {
   main {
     margin-right: 0;
     margin-left: 0;
+  }
+  .banner {
+    flex-direction: column;
+    margin: 0;
+    margin-top: 30px;
+  }
+  .banner .author-name {
+    font-size: 55px;
+  }
+  .banner .banner-title {
+    font-size: 30px;
+  }
+  .nav-title {
+    font-size: 40px;
+  }
+  .banner img {
+    width: 100%;
+  }
+  .header {
+    height: fit-content;
+    width: fit-content;
+    background-image: none;
+    margin: 0;
+    padding: 0;
+    padding-left: 30px;
+  }
+  nav {
+    flex-direction: column;
+    margin: 0;
+    gap: 15px;
+  }
+  nav ul {
+    gap: 20px;
+    flex-direction: column;
+    align-items: start;
+    padding: 0;
+  }
+  .banner button {
+    margin-bottom: 20px;
   }
   .about-me {
     text-align: justify;
@@ -262,12 +313,15 @@ a img {
     margin-bottom: 20px;
   }
   .about-info-container .info-description {
-    font-size: 20px;
+    font-size: 22px;
     font-weight: 700;
   }
-  .about-me .about-me-res {
+  .about-me .section-title {
     margin: 0;
     padding: 30px 0px;
+  }
+  .about-me .banner-description {
+    font-size: 20px;
   }
   .what-i-do {
     width: 100%;
@@ -281,14 +335,14 @@ a img {
     padding-bottom: 10px;
     font-size: 35px;
   }
-  .section-title-what-i-do-res {
+  .what-i-do .section-title {
     margin-top: 30px;
     margin-right: 0;
     margin-left: 0;
     font-size: 40px;
   }
-  .description-what-i-do-res {
-    font-size: 18px;
+  .what-i-do .banner-description {
+    font-size: 19px;
     padding: 0;
     margin-top: 20px;
   }
@@ -334,16 +388,102 @@ a img {
     align-items: center;
     justify-content: center;
   }
+  footer {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    background-color: white;
+    flex-direction: column;
+    padding: 0px;
+  }
+  .contact {
+    padding-top: 30px;
+    padding-left: 30px;
+  }
+  .form-class {
+    padding: 0px;
+    padding-left: 70px;
+  }
+  .form-class input {
+    border: 1px solid wheat;
+  }
 }
-@media screen and (min-width: 577px) and (max-width: 992px) {
+@media screen and (min-width: 577px) and (max-width: 1180px) {
   main {
     margin-right: 0;
-    margin-left: 0;
+    margin-left: 100px;
+  }
+  .banner {
+    margin-left: 120px;
+  }
+  .banner img {
+    margin-left: 100px;
+  }
+  .banner .author-name {
+    font-size: 55px;
+  }
+  .banner .banner-title {
+    font-size: 30px;
+  }
+  .nav-title {
+    font-size: 40px;
+    padding-left: 35px;
+  }
+  .header {
+    background-image: none;
+    height: fit-content;
+    width: fit-content;
+  }
+  nav {
+    margin: 0;
+    margin-top: 20px;
+  }
+  nav ul {
+    padding: 0;
+    margin: 0;
+  }
+  .banner button {
+    margin-bottom: 20px;
+  }
+  .about-me .section-title {
+    margin-top: 0px;
+    padding-top: 40px;
+  }
+  .about-me {
+    width: 100%;
+    height: 450px;
+    border-radius: 0px;
+    padding: 0 10px;
+    margin: 0px;
+    margin-top: 170px;
+    margin-left: 35px;
+    background-color: #fdf1f1;
+  }
+  .about-info-container {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .about-info-container .info-description {
+    font-size: 22px;
+  }
+  .about-me .banner-description {
+    font-size: 20.5px;
+    line-height: 28px;
+  }
+  .what-i-do {
+    width: 100%;
+    padding: 0;
+    margin: 0px;
+    margin-left: 35px;
+  }
+  .what-i-do .banner-description {
+    font-size: 20px;
+    line-height: 28px;
   }
   .section-title {
     margin-top: 100px;
-    margin-left: 40px;
-    padding-bottom: 0px;
+    padding-bottom: 20px;
     font-size: 50px;
   }
   .my-skills {
@@ -353,7 +493,7 @@ a img {
     column-gap: 0px;
   }
   .skill {
-    margin: 20px 10px 20px 40px;
+    margin: 70px 10px 20px 60px;
   }
   .skill-description {
     line-height: 28px;
@@ -379,8 +519,20 @@ a img {
     justify-content: center;
     align-items: center;
   }
-}
-
-.hide {
-  display: none;
+  footer {
+    background-color: white;
+    padding-left: 50px;
+    padding-right: 0px;
+    margin-left: 100px;
+  }
+  .contact {
+    padding-left: 0px;
+  }
+  .form-class {
+    padding-right: 0px;
+    margin-left: 80px;
+  }
+  .form-class input {
+    border: 1px solid wheat;
+  }
 }
